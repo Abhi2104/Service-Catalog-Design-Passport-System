@@ -1,0 +1,16 @@
+// AgeScript
+
+var agescript = Class.create();
+agescript.prototype =Object.extendsObject(AbstractAjaxProcessor,{
+    checkAge: function() {
+var dob = this.getParameter('sysparam_id');//param from client script
+var today = new GlideDateTime();
+var todayYear = today.getYearLocalTime();
+var bday = new GlideDateTime(dob.toString());
+var bdayYear = bday.getYearLocalTime();
+var age =todayYear - bdayYear;
+return age;
+    },
+
+    type: 'agescript'
+});

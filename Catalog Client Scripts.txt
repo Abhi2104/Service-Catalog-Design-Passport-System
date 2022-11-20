@@ -1,0 +1,24 @@
+
+
+//Mobile Number Verification
+
+
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+	var num=g_form.getValue('mobile_number');
+	var integer = /^[0-9.,]*$/;
+    if (!integer.test(newValue))
+    {
+//         alert('Please only enter in numbers!');
+//         g_form.clearValue('mobile_number'); 
+
+		if(num.length !=10)
+		{
+			g_form.clearValue('mobile_number');
+			alert('please enter valid Number');
+		}
+    }
+	 
+}
