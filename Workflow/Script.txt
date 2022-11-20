@@ -1,0 +1,30 @@
+//Run Script to Copy IInfo to Custom Tables
+
+var gr=new GlideRecord('u_passport_registration');
+gr.initialize();
+gr.u_first_name=current.variables.first_name;
+gr.u_last_name=current.variables.last_name;
+gr.u_date_of_birth=current.variables.date_of_birth;
+gr.u_marital_status=current.variables.marital_status;
+gr.u_blood_group=current.variables.blood_group;
+gr.u_mobile_number=current.variables.mobile_number;
+gr.u_email=current.variables.email;
+gr.u_address=current.variables.address;
+gr.u_state=current.variables.state;
+gr.u_district=current.variables.district;
+gr.u_apply_for=current.variables.apply_for;
+gr.u_type_of_passport=current.variables.passport_type;
+gr.u_identity_image=current.variables.identity_photo;
+gr.u_aadhar_card=current.variables.aadhar_card;
+gr.u_document_for_address_proof=current.variables.document_for_address_proof;
+gr.u_document_for_age_proof=current.variables.document_for_age_proof;
+gr.u_payment_type=current.variables.payment_type;
+gr.u_payment_mode=current.variables.payment_mode;
+gr.u_upi_id=current.variables.upi_id;
+gr.u_challan_number=current.variables.challan_number;
+gr.u_nearest_passport_office=current.variables.nearest_passport_office;
+gr.u_appointment_date=current.variables.appointment_date;
+gr.u_nationality=current.variables.nationality;
+gr.u_employment_type=current.variables.employment_type;
+gr.insert();
+ 
